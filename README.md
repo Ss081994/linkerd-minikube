@@ -56,5 +56,8 @@ Now install linkerd control plane on minikube cluster
 linkerd install | kubectl apply -f -
 ```
 
+This linkerd install command generates Kubernetes manifest files (which include the core Linkerd control plane components such as the Controller, Identity, Destination, etc.). By piping (|) this output to kubectl apply -f -, you instruct Kubernetes to create (or update) those resources in your cluster. Essentially, this step installs the main Linkerd control plane once the CRDs (from the previous step using --crds) are already in place.
+
+## 1.4. Check Linkerd is installed properly 
 
 
