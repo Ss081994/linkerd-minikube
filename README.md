@@ -108,3 +108,11 @@ kubectl -n emojivoto port-forward svc/web-svc 8080:80
 
 - The sidecar proxy in Linkerd seamlessly manages traffic (routing, retries, timeouts), collects observability metrics (latency, success rate), and enforces mTLS for secure communication—all without requiring changes to application code.
 - This separation of concerns allows developers to focus on their business logic while Linkerd handles routing, logging, and security.
+
+
+- Inject the sidecar container into the application
+
+```bash
+curl -sL run.linkerd.io/emojivoto.yml | linkerd inject - | kubectl apply -f -
+```
+
