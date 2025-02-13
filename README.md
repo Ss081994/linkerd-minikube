@@ -19,6 +19,9 @@ This README will walk you through installing and using [Linkerd](https://linkerd
   - [kubectl](https://kubernetes.io/docs/tasks/tools/) installed
   - [Minikube](https://minikube.sigs.k8s.io/docs/start/) installed
 
+![Architecture](images/archi.png "Architecture")
+
+
 ---
 
 ## 1. Install the Linkerd CLI
