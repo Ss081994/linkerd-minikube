@@ -27,10 +27,10 @@ The Linkerd CLI allows you to interact with Linkerd services on your cluster.
 
 ```bash
 curl -sL run.linkerd.io/install | sh
-
+```
 ---
 
- 1.1 Add the Linkerd CLI to your PATH
+- 1.1 Add the Linkerd CLI to your PATH
 
 ```bash
 export PATH=$PATH:/home/<system-username>/linkerd2/bin
