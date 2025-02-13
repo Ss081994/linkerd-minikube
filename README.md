@@ -32,3 +32,9 @@ curl -sL run.linkerd.io/install | sh
 
 ```bash
 export PATH=$PATH:/home/<system-username>/linkerd2/bin
+
+## 2. Start the minikube cluster
+
+```bash
+minikube start --cpus 4 --memory 4096
+
