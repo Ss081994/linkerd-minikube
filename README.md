@@ -43,4 +43,18 @@ export PATH=$PATH:/home/<system-username>/linkerd2/bin
 minikube start --cpus 4 --memory 4096
 ```
 
+## 1.3. Install Linkerd(including CRD's)
+Before installing linkerd you might have to install CRD's run 
+```bash
+linkerd install --crds | kubectl apply -f -
+```
+Linkerd generates the Custom Resource Definitions (CRDs) needed for its operation and pipes them into kubectl apply. These CRDs define the Linkerd-specific resource types (like LinkerdConfig, ServiceProfiles, etc.) that Kubernetes needs to recognize before you install the rest of the Linkerd control plane. Once applied, your cluster will have the necessary definitions in place for Linkerd to function properly.
+
+Now install linkerd control plane on minikube cluster 
+
+```bash
+linkerd install | kubectl apply -f -
+```
+
+
 
