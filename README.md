@@ -115,4 +115,7 @@ kubectl -n emojivoto port-forward svc/web-svc 8080:80
 ```bash
 curl -sL run.linkerd.io/emojivoto.yml | linkerd inject - | kubectl apply -f -
 ```
+- Check the traffic and success rates using the dashboard
+![Traffic](images/traffic.png "Traffic app")
+
 
