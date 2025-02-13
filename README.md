@@ -79,3 +79,11 @@ linkerd viz install | kubectl apply -f -
 ```
 
 
+
+View the cluster metrics in the ui. 
+```bash
+linkerd viz dashboard &
+```bash
+
+![Dashboard](images/dash.png "Viz dashboard")
+
