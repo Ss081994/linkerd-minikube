@@ -88,3 +88,23 @@ linkerd viz dashboard &
 
 ![Dashboard](images/dash.png "Viz dashboard")
 
+
+## 1.5. Deploy a sample application and inject side car proxy 
+
+In Linkerd (and most service meshes), the sidecar is a proxy container that runs alongside your main application container within the same pod. This sidecar proxy intercepts all inbound and outbound traffic for that application.
+
+
+```bash
+curl -sL run.linkerd.io/emojivoto.yml | kubectl apply -f -
+```
+
+Check the application is up and running by port forwading 
+
+```bash
+kubectl -n emojivoto port-forward svc/web-svc 8080:80
+```
+![Application](images/yellow.png "Yellow app")
+
+
+- The sidecar proxy in Linkerd seamlessly manages traffic (routing, retries, timeouts), collects observability metrics (latency, success rate), and enforces mTLS for secure communication—all without requiring changes to application code.
+- This separation of concerns allows developers to focus on their business logic while Linkerd handles routing, logging, and security.
