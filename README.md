@@ -63,4 +63,6 @@ This linkerd install command generates Kubernetes manifest files (which include 
 
 ## 1.4. Check Linkerd is installed properly 
 
-![Check](images/check-linkerd.png "Check")
+```bash
+linkerd check
+```
