@@ -66,3 +66,16 @@ This linkerd install command generates Kubernetes manifest files (which include 
 ```bash
 linkerd check
 ```
+## 1.4. Install viz for observalility 
+
+The Linkerd Viz extension provides the observability stack (Prometheus, Grafana, etc.) and a dashboard for visualizing Linkerd’s metrics. While you can run Linkerd without it, you won’t have built-in visibility into your services’ traffic. By installing Viz, you get:
+
+Prometheus – to scrape and store service mesh metrics (latency, success rate, request volume).
+Grafana – to visualize those metrics in customizable dashboards.
+Web-based Dashboard – a user interface for real-time inspection of traffic stats, mesh components, and debugging.
+
+```bash
+linkerd viz install | kubectl apply -f -
+```
+
+
